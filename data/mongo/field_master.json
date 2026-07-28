@@ -1,0 +1,220 @@
+[
+  {
+    "_id": "contact_company",
+    "type_key": "contact",
+    "key": "company",
+    "label": "Company",
+    "data_type": "string",
+    "value_source": "distinct",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE",
+      "IN",
+      "NOT IN"
+    ]
+  },
+  {
+    "_id": "contact_industry",
+    "type_key": "contact",
+    "key": "industry",
+    "label": "Industry",
+    "data_type": "string",
+    "value_source": "distinct",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE",
+      "IN",
+      "NOT IN"
+    ]
+  },
+  {
+    "_id": "contact_job_title",
+    "type_key": "contact",
+    "key": "job_title",
+    "label": "Job Title",
+    "data_type": "string",
+    "value_source": "distinct",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE",
+      "IN",
+      "NOT IN"
+    ]
+  },
+  {
+    "_id": "contact_department",
+    "type_key": "contact",
+    "key": "department",
+    "label": "Department",
+    "data_type": "string",
+    "value_source": "distinct",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE",
+      "IN",
+      "NOT IN"
+    ]
+  },
+  {
+    "_id": "contact_language",
+    "type_key": "contact",
+    "key": "language",
+    "label": "Language",
+    "data_type": "string",
+    "value_source": "distinct",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE",
+      "IN",
+      "NOT IN"
+    ]
+  },
+  {
+    "_id": "contact_country",
+    "type_key": "contact",
+    "key": "country",
+    "label": "Country",
+    "data_type": "string",
+    "value_source": "distinct",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE",
+      "IN",
+      "NOT IN"
+    ]
+  },
+  {
+    "_id": "contact_state",
+    "type_key": "contact",
+    "key": "state",
+    "label": "State",
+    "data_type": "string",
+    "value_source": "distinct",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE",
+      "IN",
+      "NOT IN"
+    ]
+  },
+  {
+    "_id": "contact_city",
+    "type_key": "contact",
+    "key": "city",
+    "label": "City",
+    "data_type": "string",
+    "value_source": "distinct",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE",
+      "IN",
+      "NOT IN"
+    ]
+  },
+  {
+    "_id": "contact_source",
+    "type_key": "contact",
+    "key": "source",
+    "label": "Source",
+    "data_type": "string",
+    "value_source": "distinct",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE",
+      "IN",
+      "NOT IN"
+    ]
+  },
+  {
+    "_id": "contact_status",
+    "type_key": "contact",
+    "key": "status",
+    "label": "Status",
+    "data_type": "string",
+    "value_source": "distinct",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE",
+      "IN",
+      "NOT IN"
+    ]
+  },
+  {
+    "_id": "contact_first_name",
+    "type_key": "contact",
+    "key": "first_name",
+    "label": "First Name",
+    "data_type": "string",
+    "value_source": "free_text",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE"
+    ]
+  },
+  {
+    "_id": "contact_last_name",
+    "type_key": "contact",
+    "key": "last_name",
+    "label": "Last Name",
+    "data_type": "string",
+    "value_source": "free_text",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE"
+    ]
+  },
+  {
+    "_id": "contact_email",
+    "type_key": "contact",
+    "key": "email",
+    "label": "Email",
+    "data_type": "string",
+    "value_source": "free_text",
+    "operators": [
+      "=",
+      "!=",
+      "LIKE",
+      "NOT LIKE"
+    ]
+  },
+  {
+    "_id": "contact_created_date",
+    "type_key": "contact",
+    "key": "created_date",
+    "label": "Created Date",
+    "data_type": "date",
+    "value_source": "free_text",
+    "operators": [
+      "=",
+      "!=",
+      ">",
+      "<",
+      ">=",
+      "<="
+    ]
+  }
+]
