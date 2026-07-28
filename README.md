@@ -84,7 +84,7 @@ cd rulebuilder-server
 python -m venv .venv
 
 # Windows PowerShell
-.\.venv\Scripts\Activate.ps1
+.venv\Scripts\activate
 
 # macOS / Linux
 source .venv/bin/activate
