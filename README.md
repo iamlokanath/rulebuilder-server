@@ -75,16 +75,48 @@ rulebuilder-server/
 ### 1. Prerequisites
 
 - Python 3.12+
-- MongoDB running on `localhost:27017`
+- MongoDB Community Server installed ([download](https://www.mongodb.com/try/download/community))
 
-### 2. Install
+### 2. Start MongoDB locally (Windows)
+
+Keep this terminal open while you use the API. Data is stored in `.mongo-data/` (gitignored).
+
+**PowerShell — from the backend folder:**
+
+```powershell
+cd "E:\Personal Projects\eatech\backend"
+
+$dataDir = "$PWD\.mongo-data"
+New-Item -ItemType Directory -Force -Path $dataDir | Out-Null
+
+& "C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe" `
+  --dbpath $dataDir `
+  --bind_ip 127.0.0.1 `
+  --port 27017
+```
+
+You should see MongoDB listening on `127.0.0.1:27017`. Leave that window running.
+
+**Stop MongoDB:** press `Ctrl+C` in that terminal, or:
+
+```powershell
+Stop-Process -Name mongod -Force -ErrorAction SilentlyContinue
+```
+
+**Notes**
+
+- If your install path differs, change `7.0` to your version folder under `C:\Program Files\MongoDB\Server\`.
+- If Git complains about `.mongo-data` files being locked, stop MongoDB first, then discard those changes. Never commit `.mongo-data`.
+- Alternative: use Docker (`docker compose up`) so Compose starts Mongo for you.
+
+### 3. Install
 
 ```bash
 cd rulebuilder-server
 python -m venv .venv
 
 # Windows PowerShell
-.\.venv\Scripts\Activate.ps1
+.venv\Scripts\activate
 
 # macOS / Linux
 source .venv/bin/activate
@@ -94,7 +126,7 @@ copy .env.example .env
 # macOS/Linux: cp .env.example .env
 ```
 
-### 3. Configure `.env`
+### 4. Configure `.env`
 
 At minimum set:
 
@@ -108,7 +140,7 @@ CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
 GOOGLE_CLIENT_ID=           # optional, for Google login
 ```
 
-### 4. Seed database
+### 5. Seed database
 
 ```bash
 python scripts/seed_db.py
@@ -120,7 +152,7 @@ This loads:
 - `type_master` / `field_master`
 - seeded admin user from `.env`
 
-### 5. Run API
+### 6. Run API
 
 ```bash
 uvicorn app.main:app --reload --port 8000
